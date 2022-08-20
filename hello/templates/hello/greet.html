@@ -1,0 +1,10 @@
+{% extends 'hello/layout.html' %}
+{% block title %}Greeting{% endblock %}
+{% block body %}
+{% if 5 <= hour and hour < 12 %} <H1>Good Morning, {{name}}</H1>
+    {% elif 12 <= hour and hour < 18 %} <H1>Good Afternoon, {{name}}</H1>
+        {% elif 18 <= hour and hour < 21 %} <H1>Good Evening, {{name}}</H1>
+            {% else %}
+            <H1>Good Night, {{name}}</H1>
+            {% endif %}
+            {% endblock %}
